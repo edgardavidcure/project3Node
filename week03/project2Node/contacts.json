@@ -1,0 +1,23 @@
+[
+    {
+        "firstName": "Edgar",
+        "lastName": "Sanchez",
+        "email": "edgarsanchez@gmail.com",
+        "favoriteColor": "blue",
+        "birthday": "01/01/2001"
+    },
+    {
+        "firstName": "David",
+        "lastName": "Cure",
+        "email": "davidsanchez@gmail.com",
+        "favoriteColor": "red",
+        "birthday": "02/02/2002"
+    },
+    {
+        "firstName": "Rafael",
+        "lastName": "Uribe",
+        "email": "rafaeluribe@gmail.com",
+        "favoriteColor": "green",
+        "birthday": "03/03/2003"
+    }
+]
