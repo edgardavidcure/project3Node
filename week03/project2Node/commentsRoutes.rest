@@ -74,7 +74,7 @@ Content-Type: application/json
   "content": "The best tent in the world",
   "createdAt": "20/20/2020",
   "rate": "5",
-  "user": "edgar2"
+  "user": "edgar3"
 }
 ###DELETE comment by id
 DELETE http://localhost:3000/comments/650cb309628c58406f5751e0
