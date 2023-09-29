@@ -1,0 +1,84 @@
+##### ON RENDER ####
+#GET all comments
+GET https://test-f9oo.onrender.com/comments
+
+###GET comment by id
+
+GET https://test-f9oo.onrender.com/comments/650cb309628c58406f5751e0
+
+###POST new comment
+
+POST https://test-f9oo.onrender.com/comments HTTP/1.1
+Content-Type: application/json
+
+{
+  "product_id": "203ML",
+  "content": "The best tent in the world",
+  "createdAt": "20/20/2020",
+  "rate": "5",
+  "user": "edgar1"
+}
+###PUT update comment info
+PUT https://test-f9oo.onrender.com/comments/650cb309628c58406f5751e0
+Content-Type: application/json
+
+{
+  "product_id": "203ML",
+  "content": "The best tent in the world",
+  "createdAt": "20/20/2020",
+  "rate": "5",
+  "user": "edgar2"
+}
+
+###DELETE comment by id
+DELETE https://test-f9oo.onrender.com/comments/650cb309628c58406f5751e0
+
+
+###DELETE ALL comments
+DELETE https://test-f9oo.onrender.com/comments
+
+
+
+
+
+
+
+
+#### LOCALHOST ####
+###GET all comments
+GET http://localhost:3000/comments
+
+###GET comment by id
+
+GET http://localhost:3000/comments/650cb309628c58406f5751e0
+
+###POST new comment
+
+POST http://localhost:3000/comments HTTP/1.1
+Content-Type: application/json
+
+{
+  "product_id": "203ML",
+  "content": "The best tent in the world",
+  "createdAt": "20/20/2020",
+  "rate": "5",
+  "user": "edgar1"
+}
+
+###PUT update comment info
+PUT http://localhost:3000/comments/650cb309628c58406f5751e0
+Content-Type: application/json
+
+{
+  "product_id": "203ML",
+  "content": "The best tent in the world",
+  "createdAt": "20/20/2020",
+  "rate": "5",
+  "user": "edgar2"
+}
+###DELETE comment by id
+DELETE http://localhost:3000/comments/650cb309628c58406f5751e0
+
+
+###DELETE ALL comments
+DELETE http://localhost:3000/comments
