@@ -1,13 +1,18 @@
 const express = require("express");
 const router = express.Router();
-
+const { commentValidation, validate } = require("../validation");
 const commentsController = require("../controllers/comments");
 
-router.get("/comments", commentsController.getAllComments);
-router.get("/comments/:id", commentsController.getSingleComment);
-router.put("/comments/:id", commentsController.updateSingleComment);
-router.post("/comments", commentsController.addComment);
-router.delete("/comments/:id", commentsController.deleteSingleComment);
-router.delete("/comments", commentsController.deleteAllComments);
+router.get("/", commentsController.getAllComments);
+router.get("/:id", commentsController.getSingleComment);
+router.put(
+  "/:id",
+  commentValidation,
+  validate,
+  commentsController.updateSingleComment
+);
+router.post("/", commentValidation, validate, commentsController.addComment);
+router.delete("/:id", commentsController.deleteSingleComment);
+router.delete("/", commentsController.deleteAllComments);
 
 module.exports = router;

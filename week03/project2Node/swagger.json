@@ -31,7 +31,7 @@
         }
       }
     },
-    "/comments/comments": {
+    "/comments/": {
       "get": {
         "tags": [
           "Comments"
@@ -58,7 +58,7 @@
             "schema": {
               "type": "object",
               "properties": {
-                "product_id": {
+                "productId": {
                   "example": "any"
                 },
                 "content": {
@@ -84,6 +84,9 @@
           "400": {
             "description": "Bad Request"
           },
+          "422": {
+            "description": "Unprocessable Entity"
+          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -104,7 +107,7 @@
         }
       }
     },
-    "/comments/comments/{id}": {
+    "/comments/{id}": {
       "get": {
         "tags": [
           "Comments"
@@ -177,6 +180,9 @@
           "404": {
             "description": "Not Found"
           },
+          "422": {
+            "description": "Unprocessable Entity"
+          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -208,7 +214,7 @@
         }
       }
     },
-    "/users/users": {
+    "/users/": {
       "get": {
         "tags": [
           "Users"
@@ -258,6 +264,9 @@
           "400": {
             "description": "Bad Request"
           },
+          "422": {
+            "description": "Unprocessable Entity"
+          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -278,7 +287,7 @@
         }
       }
     },
-    "/users/users/{id}": {
+    "/users/{id}": {
       "get": {
         "tags": [
           "Users"
@@ -350,6 +359,9 @@
           },
           "404": {
             "description": "Not Found"
+          },
+          "422": {
+            "description": "Unprocessable Entity"
           },
           "500": {
             "description": "Internal Server Error"

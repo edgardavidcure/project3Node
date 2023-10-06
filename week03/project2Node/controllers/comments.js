@@ -8,9 +8,9 @@ const addComment = (req, res) => {
     res.status(400).send({ message: "Content can not be empty!" });
     return;
   }
-  const { product_id, content, createdAt, rate, user } = req.body;
+  const { productId, content, createdAt, rate, user } = req.body;
   const comment = new Comment({
-    product_id,
+    productId,
     content,
     createdAt,
     rate,
