@@ -1,0 +1,32 @@
+<h6>Dashboard</h6>
+<h4>Welcome {{name}}</h4>
+<p>Here are your comments</p>
+
+{{#if comments}}
+
+<table class="striped">
+    <thead>
+        <tr>
+            <th>User</th>
+            <th>Date</th>
+            <th>Rate</th>
+            <th>Comment</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each comments}}
+            <tr>
+                <td><a href="/comments/{{_id}}">{{user}}</a></td>
+                <td>{{formatDate createdAt "MMMM Do YYYY, h:mm:ss a"}}</td>
+                <td>{{rate}}</td>
+                <td>{{stripTags content}}</td>
+                <td></td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
+{{else}}
+    <p>You have not created any comments</p>
+
+{{/if}}
