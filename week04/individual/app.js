@@ -11,7 +11,7 @@ const session = require("express-session");
 const MongoStore = require("connect-mongodb-session")(session);
 const connectDB = require("./config/db");
 
-dotenv.config({ path: "./config/config.env" });
+dotenv.config({ path: "./config.env" });
 require("./config/passport")(passport);
 
 connectDB();
