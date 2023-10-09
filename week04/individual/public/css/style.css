@@ -7,3 +7,16 @@
 p{
     margin: 10px 0 !important;
 }
+
+.btn-float{
+    float: left;
+    margin-right: 10px;
+}
+
+.flex{
+    display: flex;
+}
+
+.img-small{
+    width: 120px;
+}

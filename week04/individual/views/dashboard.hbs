@@ -17,11 +17,21 @@
     <tbody>
         {{#each comments}}
             <tr>
-                <td><a href="/comments/{{_id}}">{{user}}</a></td>
+                <td><a href="/comments/{{_id}}">{{{user.displayName}}}</a></td>
                 <td>{{formatDate createdAt "MMMM Do YYYY, h:mm:ss a"}}</td>
                 <td>{{rate}}</td>
                 <td>{{stripTags content}}</td>
-                <td></td>
+                <td>
+                    <a href="/comments/edit/{{_id}}" class="btn btn-float">
+                        <i class="fas fa-edit"></i>
+                    </a>
+                    <form action="/comments/{{_id}}" method="POST" id="delete-form" class="flex">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <button type="submit" class="btn red">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </form>
+                </td>
             </tr>
         {{/each}}
     </tbody>

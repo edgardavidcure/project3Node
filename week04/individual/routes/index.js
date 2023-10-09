@@ -14,9 +14,13 @@ router.get("/", ensureGuest, (req, res) => {
 router.get("/dashboard", ensureAuth, async (req, res) => {
   console.log(req.user);
   try {
-    const comments = await Comment.find({ user: req.user.id }).lean();
+    const comments = await Comment.find({ user: req.user.id })
+      .populate("user")
+      .sort({ createdAt: "desc" })
+      .lean();
     res.render("dashboard", {
       name: req.user.firstName,
+
       comments,
     });
   } catch (error) {
