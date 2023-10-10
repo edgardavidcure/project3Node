@@ -16,7 +16,8 @@ const addComment = async (req, res) => {
         rate,
         user,
       });
-      const data = await comment.save(comment);
+      req.body.user = req.user.id;
+      const data = await Comment.create(req.body);
       res.send(data);
     } else {
       req.body.user = req.user.id;
@@ -88,7 +89,14 @@ const updateSingleComment = async (req, res) => {
         rate,
         user,
       });
-      const data = await comment.replaceOne({ _id: req.params.id }, comment);
+      const data = await Comment.findOneAndUpdate(
+        { _id: req.params.id },
+        req.body,
+        {
+          new: true,
+          runValidators: true,
+        }
+      );
       if (!data) {
         res.status(404).send({
           message: `Cannot update Comment with id=${req.params.id}. Maybe Comment was not found!`,
