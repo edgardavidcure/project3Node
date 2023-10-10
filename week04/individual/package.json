@@ -19,6 +19,7 @@
     "express-graphql": "^0.12.0",
     "express-handlebars": "^7.1.2",
     "express-session": "^1.17.3",
+    "express-validator": "^7.0.1",
     "googleapis": "^105.0.0",
     "graphql": "^15.8.0",
     "method-override": "^3.0.0",
@@ -26,7 +27,10 @@
     "mongoose": "^7.6.0",
     "morgan": "^1.10.0",
     "passport": "^0.6.0",
-    "passport-google-oauth20": "^2.0.0"
+    "passport-google-oauth20": "^2.0.0",
+    "swagger": "^0.7.5",
+    "swagger-autogen": "^2.23.6",
+    "swagger-ui-express": "^5.0.0"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",

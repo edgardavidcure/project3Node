@@ -2,7 +2,10 @@ const express = require("express");
 const router = express.Router();
 const { ensureAuth, ensureGuest } = require("../middleware/auth");
 const Comment = require("../models/Comment");
+const comments = require("./comments");
 
+router.use("/", require("./swagger"));
+router.use("/comments", comments);
 //@desc LOGIN/Landing Page
 router.get("/", ensureGuest, (req, res) => {
   res.render("login", {
